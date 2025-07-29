@@ -1,0 +1,102 @@
+<section class="section">
+  <section class="section-contact">
+    <div class="content">
+      <h2>ВЗЕМИ ОФЕРТА БЪРЗО И ЛЕСНО</h2>
+      <form class="form">
+        <div class="fields">
+          <div class="field icon">
+            <input type="text" placeholder="Вашето име" required />
+          </div>
+          <div class="field icon">
+            <input type="number" placeholder="359XXXXXXXXX" required />
+          </div>
+        </div>
+        <a href="#" type="submit" class="submit-btn">
+          <span class="icon">💬</span>
+          ИЗПРАТИ
+        </a>
+      </form>
+    </div>
+  </section>
+</section>
+
+<style>
+  .section {
+    .section-contact {
+      display: flex;
+      flex-direction: column;
+      padding-top: 3em;
+      margin-left: 3em;
+      margin-right: 0.6em;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 3em;
+      max-width: 16ch;
+      color: #fff;
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+      gap: 5em;
+      align-items: center;
+      width: 65%;
+      margin: 0 auto;
+      background: #7a7e86;
+      border-radius: 0.75em;
+      padding: 1em 1.5em;
+    }
+
+    .form {
+      display: flex;
+      align-items: stretch;
+
+      .fields {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        flex: 1;
+
+        .field {
+          display: flex;
+          align-items: center;
+          background: #fff;
+          border-radius: 0.75em;
+          padding: 1em;
+          border: 2px solid #99bf38;
+
+          input {
+            border: none;
+            outline: none;
+            width: 280px;
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .submit-btn {
+        margin-left: 5em;
+        margin-right: 2.3em;
+        background: #353a43;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 140px;
+        border-radius: 1em;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 1em;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background-color: #fff;
+          color: #31353d;
+        }
+      }
+    }
+  }
+</style>

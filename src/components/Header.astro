@@ -1,0 +1,130 @@
+<header class="section">
+  <section class="section-header">
+    <a href="#" class="site-logo"
+      ><img src="/ZAKMETAL.png.png" alt="picture" /></a
+    >
+    <a href="tel:+359876771557" class="contact">
+      <span class="pulse"> ☎ 0876 771 557 </span>
+    </a>
+
+    <nav>
+      <ul>
+        <li><a href="#" class="underline">Начало</a></li>
+        <li><a href="#" class="underline">За нас</a></li>
+        <li><a href="#" class="underline">Услуги</a></li>
+        <li><a href="#" class="underline">Контакти</a></li>
+      </ul>
+    </nav>
+  </section>
+</header>
+
+<style>
+  .section {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #ffffff;
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 1em;
+    }
+
+    li,
+    a {
+      display: block;
+    }
+
+    a {
+      display: flex;
+      gap: 0.5em;
+      padding: 0.5em;
+      margin-right: 0.4em;
+      margin-left: 0.2em;
+      text-decoration: none;
+      font-weight: bold;
+      color: #444;
+    }
+
+    a.site-logo {
+      display: inline-block;
+      padding: 0.7em;
+      margin: 0;
+      max-width: 320px;
+    }
+
+    a.site-logo img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    a.contact {
+      font-size: 1.2em;
+      color: #99bf38;
+      transition: color 0.3s ease-in-out;
+
+      /* .pulse {
+            display: inline-block;
+            animation: pulse 1.5s ease-in-out infinite;
+        } */
+
+      &:hover {
+        color: #444;
+      }
+    }
+
+    a.underline {
+      position: relative;
+      display: inline-block;
+      text-decoration: none;
+      color: #444;
+      transition: color 0.3s ease-in-out;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #99bf38;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      &:hover {
+        color: #99bf38;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      text-shadow: 0 0 0 rgba(153, 191, 56, 0);
+    }
+
+    50% {
+      transform: scale(1.05);
+      text-shadow: 0 0 8px rgba(153, 191, 56, 0.6);
+    }
+
+    100% {
+      transform: scale(1);
+      text-shadow: 0 0 0 rgba(153, 191, 56, 0);
+    }
+  }
+</style>

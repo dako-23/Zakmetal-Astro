@@ -1,0 +1,146 @@
+@media(width <=654px) {
+
+    .section {
+        &.section-header {
+            .inner {
+                flex-direction: column;
+            }
+
+            nav ul a {
+                font-size: 1em;
+            }
+        }
+
+        &.section-banner {
+            & .inner {
+                h2 {
+                    font-size: 1.3em;
+                }
+                .button {
+                    font-size: 0.9em;
+                }
+            }
+        }
+
+        &.section-contact {
+
+            .inner {
+                margin-right: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .content {
+                flex-direction: column;
+                gap: 2em;
+                width: 100%;
+                margin-right: 1em;
+            }
+
+            .form {
+                flex-direction: column;
+
+                .submit-btn {
+                    margin-top: 1em;
+                    padding: 1em;
+                }
+            }
+        }
+
+        &.section-for-you {
+            .content {
+                flex-direction: column;
+            }
+        }
+
+        &.section-footer {
+            .inner {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 2em;
+
+                .table {
+                    padding-bottom: 0;
+                }
+
+                .table img {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+@media(width > 654px) and (width <=920px) {
+
+    .section {
+        &.section-header {
+            .inner {
+                flex-direction: column;
+            }
+
+            nav ul {
+                gap: 5em;
+            }
+
+            nav ul a {
+                font-size: 1.2em;
+            }
+        }
+
+        &.section-banner {
+            & .inner {
+                h2 {
+                    font-size: 2em;
+                }
+            }
+        }
+
+        &.section-footer {
+            .inner {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 2em;
+
+                .table img {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+@media(width > 654px) and (width <=1500px) {
+    .section {
+
+        &.section-contact {
+
+            .content {
+                width: 70% !important;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+
+            .content {
+                flex-direction: column;
+                gap: 2em;
+                width: 100%;
+            }
+
+            .form {
+                flex-direction: column;
+
+                .submit-btn {
+                    margin-top: 1em;
+                    padding: 1em;
+                }
+            }
+        }
+    }
+}
