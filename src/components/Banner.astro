@@ -1,7 +1,13 @@
-<section class="section">
+---
+import ScrollButton from "../components/ScrollButton.jsx";
+---
+
+<section id="top" class="section">
   <section class="section-banner animate-fade-slide">
     <h2>Време ли е да се сбогувате със стария си автомобил?</h2>
-    <a href="#" class="button">Свържи се с нас</a>
+    <ScrollButton className="button" targetId="kontakti" offset={-230} client:load>
+      Свържи се с нас
+    </ScrollButton>
   </section>
 </section>
 
@@ -62,6 +68,7 @@
         text-decoration: none;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         transition: all 0.3s ease-in-out;
+        cursor: pointer;
 
         &:hover {
           background-color: #fff;

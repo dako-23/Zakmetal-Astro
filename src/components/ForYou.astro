@@ -1,4 +1,4 @@
-<section class="section">
+<section id="uslugi" class="section">
   <section class="section-for-you">
     <div class="content">
       <span class="icon"> ☎ </span>
@@ -97,4 +97,41 @@
       color: #444;
     }
   }
+
+  .content {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.content.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 </style>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const contents = document.querySelectorAll("#uslugi .content");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("revealed");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 1
+    });
+
+    contents.forEach((el, i) => {
+      el.style.transitionDelay = `${i * 0.2}s`;
+      observer.observe(el);
+    });
+  });
+</script>
+
+
+

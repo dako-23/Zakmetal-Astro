@@ -1,3 +1,7 @@
+---
+import ScrollButton from "../components/ScrollButton.jsx";
+---
+
 <header class="section">
   <section class="section-header">
     <a href="#" class="site-logo"
@@ -9,10 +13,10 @@
 
     <nav>
       <ul>
-        <li><a href="#" class="underline">Начало</a></li>
-        <li><a href="#" class="underline">За нас</a></li>
-        <li><a href="#" class="underline">Услуги</a></li>
-        <li><a href="#" class="underline">Контакти</a></li>
+        <li><ScrollButton className="underline" targetId="top" offset={-100} client:load>Начало</ScrollButton></li>
+        <li><ScrollButton className="underline" targetId="za-nas" offset={-150} client:load>За нас</ScrollButton></li>
+        <li><ScrollButton className="underline" targetId="uslugi" offset={-200} client:load>Услуги</ScrollButton></li>
+        <li><ScrollButton className="underline" targetId="kontakti" offset={-230} client:load>Контакти</ScrollButton></li>
       </ul>
     </nav>
   </section>
@@ -87,6 +91,7 @@
       text-decoration: none;
       color: #444;
       transition: color 0.3s ease-in-out;
+      cursor: pointer;
 
       &::after {
         content: "";

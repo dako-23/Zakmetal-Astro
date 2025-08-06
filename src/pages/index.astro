@@ -2,17 +2,60 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Banner from "../components/Banner.astro";
-import Contact from "../components/Contact.astro"
-import AboutUs from "../components/AboutUs.astro"
-import ForYou from "../components/ForYou.astro"
-import Footer from "../components/Footer.astro"
+import Contact from "../components/Contact.astro";
+import AboutUs from "../components/AboutUs.astro";
+import ForYou from "../components/ForYou.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout>
   <Header />
-  <Banner />
-  <Contact />
-  <AboutUs />
-  <ForYou />
+  <section class="animated-section">
+    <Banner />
+  </section>
+  <section class="animated-section">
+    <Contact />
+  </section>
+  <section class="animated-section">
+    <AboutUs />
+  </section>
+    <ForYou />
   <Footer />
 </Layout>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("revealed");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 1,
+      }
+    );
+
+    document.querySelectorAll(".animated-section").forEach((section) => {
+      observer.observe(section);
+    });
+  });
+</script>
+
+<style>
+  .animated-section {
+    opacity: 0;
+    transform: translateY(-2rem);
+    transition:
+      opacity 0.8s ease,
+      transform 0.8s ease;
+  }
+
+  .animated-section.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
