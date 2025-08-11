@@ -1,8 +1,9 @@
 <section class="section">
   <footer class="section-footer">
     <div class="table">
-      <img src="/ZAKMETAL.png.png" alt="" />
-
+      <a href="/" id="footerScroll">
+        <img src="/ZAKMETAL.png.png" alt="" />
+      </a>
       <p>
         Zakmetal.net извършва изкупуване и рециклиране на автомобили за скрап в
         цяла България. Бързо обслужване, документ за КАТ и плащане на място.
@@ -117,3 +118,9 @@
     }
   }
 </style>
+
+<script>
+  import { attachScrollToTop } from "../js/attachScrollToTop";
+
+  attachScrollToTop("footerScroll");
+</script>

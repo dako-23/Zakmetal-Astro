@@ -4,7 +4,7 @@ import ScrollButton from "../components/ScrollButton.jsx";
 
 <header class="section">
   <section class="section-header">
-    <a href="#" class="site-logo"
+    <a href="/" id="headerScroll" class="site-logo"
       ><img src="/ZAKMETAL.png.png" alt="picture" /></a
     >
     <a href="tel:+359876771557" class="contact">
@@ -133,3 +133,9 @@ import ScrollButton from "../components/ScrollButton.jsx";
     }
   }
 </style>
+
+<script>
+  import { attachScrollToTop } from "../js/attachScrollToTop";
+
+  attachScrollToTop("headerScroll");
+</script>
