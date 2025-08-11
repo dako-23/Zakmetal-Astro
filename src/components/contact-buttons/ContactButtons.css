@@ -1,0 +1,65 @@
+  .floating-buttons {
+    position: fixed;
+    bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-right: 1em;
+    gap: 0.8em;
+    z-index: 2;
+
+    .button-wrapper {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5em;
+
+      .viber-pos,
+      .phone-pos {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      .floating-button {
+        width: 50px;
+        height: 50px;
+        border-radius: 0.3em;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .info-bubble.viber,
+      .info-bubble.phone {
+        position: absolute;
+        right: 120%;
+        background-color: #0d2e36;
+        color: white;
+        padding: 0.5em 1em;
+        border-radius: 0.3em;
+        font-size: 0.85em;
+        opacity: 0;
+        transform: translateY(15px);
+        transition:
+          opacity 0.3s ease,
+          transform 0.3s ease;
+        pointer-events: none;
+        white-space: nowrap;
+        text-align: center;
+      }
+
+      .viber-pos:hover .info-bubble.viber,
+      .phone-pos:hover .info-bubble.phone {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
