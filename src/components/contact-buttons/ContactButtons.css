@@ -1,10 +1,11 @@
   .floating-buttons {
     position: fixed;
     bottom: 2em;
+    right: 1em;
+    width: auto;
     display: flex;
     flex-direction: column;
-    align-items: end;
-    padding-right: 1em;
+    align-items: flex-end;
     gap: 0.8em;
     z-index: 2;
 
@@ -12,7 +13,6 @@
       position: relative;
       display: flex;
       flex-direction: column;
-      align-items: center;
       gap: 0.5em;
 
       .viber-pos,

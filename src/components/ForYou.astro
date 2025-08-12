@@ -1,6 +1,21 @@
+---
+import { data } from "./constants/forYouData.js";
+---
+
 <section id="uslugi" class="section">
   <section class="section-for-you">
+    {data.map(({icon: Icon,title, subTitle, text }) => 
     <div class="content">
+      <span class="icon"> <Icon/> </span>
+      <div class="info">
+        <h3>{title}</h3>
+        <p>{subTitle}</p>
+        <p>{text}</p>
+      </div>
+    </div>
+    )}
+
+    <!-- <div class="content">
       <span class="icon"> ☎ </span>
       <div class="info">
         <h3>НАЙ-ДОБРА ЦЕНА ВЕДНАГА</h3>
@@ -34,19 +49,7 @@
           скрити такси и излишно чакане.
         </p>
       </div>
-    </div>
-
-    <div class="content">
-      <span class="icon"> ☎ </span>
-      <div class="info">
-        <h3>НАЙ-ДОБРА ЦЕНА ВЕДНАГА</h3>
-        <p>Професионално оценяване</p>
-        <p>
-          Получете справедлива оферта за стария си автомобил още днес — без
-          скрити такси и излишно чакане.
-        </p>
-      </div>
-    </div>
+    </div> -->
   </section>
 </section>
 
@@ -54,14 +57,15 @@
   .section {
     .section-for-you {
       display: flex;
-      flex-wrap: wrap;
-      gap: 3em;
-      max-width: 60%;
       margin: 0 auto;
       margin-top: 3em;
       margin-bottom: 3em;
-    }
+      max-width: 60%;
+      flex-wrap: wrap;
+      gap: 3em;
 
+    }
+    
     .content {
       flex: 1 1 300px;
       display: flex;
@@ -77,6 +81,7 @@
       justify-content: center;
       font-size: 6em;
       border-radius: 0.2em;
+      color: #444;
     }
 
     h3 {
@@ -89,7 +94,7 @@
       margin-bottom: 0.2em;
       font-size: 1.2em;
       color: #99bf38;
-      max-width: 28ch;
+      max-width: 36ch;
     }
 
     p + p {
@@ -99,32 +104,36 @@
   }
 
   .content {
-  opacity: 0;
-  transform: translateY(2rem);
-  transition: opacity 1s ease, transform 1s ease;
-}
+    opacity: 0;
+    transform: translateY(2rem);
+    transition:
+      opacity 1s ease,
+      transform 1s ease;
+  }
 
-.content.revealed {
-  opacity: 1;
-  transform: translateY(0);
-}
-
+  .content.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
 </style>
 
 <script is:inline>
   document.addEventListener("DOMContentLoaded", () => {
     const contents = document.querySelectorAll("#uslugi .content");
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("revealed");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 1
-    });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("revealed");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 1,
+      }
+    );
 
     contents.forEach((el, i) => {
       el.style.transitionDelay = `${i * 0.2}s`;
@@ -132,6 +141,3 @@
     });
   });
 </script>
-
-
-
