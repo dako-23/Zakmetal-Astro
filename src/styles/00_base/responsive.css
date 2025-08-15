@@ -53,7 +53,6 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      padding: 2em;
 
       .table {
         h3 {
@@ -93,7 +92,6 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      padding: 2em;
 
       .table {
         h3 {
@@ -110,27 +108,36 @@
 
 @media (width > 654px) and (width <=1500px) {
   .section {
-    &.section-contact {
+    &.section.section .section-banner {
+      h2 {
+        font-size: 2.1em;
+      }
+      .button {
+        font-size: 1em;
+      }
+    }
+
+    &.section .section-contact {
       .content {
-        width: 70% !important;
+        width: 50%;
       }
 
       h2 {
-        font-size: 2em;
+        font-size: 1.8em;
       }
 
       .content {
         flex-direction: column;
-        gap: 2em;
-        width: 100%;
+        gap: 1em;
       }
 
       .form {
         flex-direction: column;
 
         .submit-btn {
+          flex-direction: row;
           margin-top: 1em;
-          padding: 1em;
+          padding: 0.8em;
         }
       }
     }
