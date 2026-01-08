@@ -1,31 +1,9 @@
-<section id="kontakti" class="section">
-  <section class="section-contact">
-    <div class="content">
-      <h2>ВЗЕМИ ОФЕРТА БЪРЗО И ЛЕСНО</h2>
-      <form class="form">
-        <div class="fields">
-          <div class="field icon">
-            <input type="text" placeholder="Вашето име" required />
-          </div>
-          <div class="field icon">
-            <input type="number" placeholder="359XXXXXXXXX" required />
-          </div>
-        </div>
-        <a href="#" type="submit" class="submit-btn">
-          <span class="icon">💬</span>
-          ИЗПРАТИ
-        </a>
-      </form>
-    </div>
-  </section>
-</section>
-
-<style>
-  .section {
+ .section-main-contact {
     .section-contact {
       display: flex;
       flex-direction: column;
       padding-top: 3em;
+      
     }
     h2 {
       text-align: center;
@@ -34,7 +12,7 @@
       color: #fff;
     }
 
-    .content {
+    .content{
       display: flex;
       justify-content: center;
       gap: 5em;
@@ -98,4 +76,3 @@
       }
     }
   }
-</style>

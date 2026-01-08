@@ -1,29 +1,12 @@
-
-<section id="za-nas" class="section">
-  <section class="section-about">
-    <div class="about-image"></div>
-    <div class="about-content">
-      <h2>Кои сме ние</h2>
-      <h3>Надежден партньор за изкупуване на автомобили</h3>
-      <p>
-        Zakmetal е бързоразвиваща се компания за изкупуване и рециклиране на
-        стари автомобили. Работим честно и прозрачно — гарантираме най-добрата
-        цена и бърза сделка.
-      </p>
-      <ul class="highlights">
-        <li>✔️ Над 10 години опит</li>
-        <li>✔️ 5000+ изкупени автомобила</li>
-      </ul>
-    </div>
-  </section>
-</section>
-
-<style>
-  .section {
+.section-main-about {
     background: #f9f9f9;
     padding: 4em 2em;
     margin-top: 3em;
     perspective: 1000px;
+    
+    h2{
+      color: #363634;
+    }
 
     .motion-wrapper {
       transform-style: preserve-3d;
@@ -74,4 +57,3 @@
       }
     }
   }
-</style>

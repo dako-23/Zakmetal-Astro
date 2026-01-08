@@ -1,5 +1,4 @@
 import { FaMoneyBillWave, FaTruckMoving, FaFileAlt } from 'react-icons/fa';
-import { BsFileEarmarkText } from 'react-icons/bs';
 import { MdLocalParking } from 'react-icons/md';
 
 

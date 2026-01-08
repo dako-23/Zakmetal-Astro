@@ -1,28 +1,4 @@
----
-import ScrollButton from './Scrollbutton.jsx'
----
-<header class="section">
-  <section class="section-header">
-    <a href="/" id="headerScroll" class="site-logo"
-      ><img src="/ZAKMETAL.png.png" alt="picture" /></a
-    >
-    <a href="tel:+359876771557" class="contact">
-      <span class="pulse"> ☎ 0876 771 557 </span>
-    </a>
-
-    <nav>
-      <ul>
-        <li><ScrollButton className="underline" targetId="top" offset={-100} client:load>Начало</ScrollButton></li>
-        <li><ScrollButton className="underline" targetId="za-nas" offset={-150} client:load>За нас</ScrollButton></li>
-        <li><ScrollButton className="underline" targetId="uslugi" offset={-200} client:load>Услуги</ScrollButton></li>
-        <li><ScrollButton className="underline" targetId="kontakti" offset={-230} client:load>Контакти</ScrollButton></li>
-      </ul>
-    </nav>
-  </section>
-</header>
-
-<style>
-  .section {
+ .section-main-header {
     position: sticky;
     top: 0;
     z-index: 10;
@@ -131,10 +107,3 @@ import ScrollButton from './Scrollbutton.jsx'
       text-shadow: 0 0 0 rgba(153, 191, 56, 0);
     }
   }
-</style>
-
-<script>
-  import { attachScrollToTop } from "../js/attachScrollToTop";
-
-  attachScrollToTop("headerScroll");
-</script>

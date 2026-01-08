@@ -1,11 +1,12 @@
 ---
-import { data } from "./constants/forYouData.js";
+import './ForYou.css'
+import { data } from "../constants/forYouData.js";
 ---
 
-<section id="uslugi" class="section">
+<section id="uslugi" class="section-main-fy">
   <section class="section-for-you">
     {data.map(({icon: Icon,title, subTitle, text }) => 
-    <div class="content">
+    <div class="content-fy">
       <span class="icon"> <Icon/> </span>
       <div class="info">
         <h3>{title}</h3>
@@ -53,74 +54,9 @@ import { data } from "./constants/forYouData.js";
   </section>
 </section>
 
-<style>
-  .section {
-    .section-for-you {
-      display: flex;
-      margin: 0 auto;
-      margin-top: 3em;
-      margin-bottom: 3em;
-      max-width: 60%;
-      flex-wrap: wrap;
-      gap: 3em;
-
-    }
-    
-    .content {
-      flex: 1 1 300px;
-      display: flex;
-      gap: 2em;
-    }
-
-    .icon {
-      display: flex;
-      background-color: #f4f5f5;
-      min-width: 180px;
-      min-height: 180px;
-      align-items: center;
-      justify-content: center;
-      font-size: 6em;
-      border-radius: 0.2em;
-      color: #444;
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-    }
-
-    h3 {
-      margin-bottom: 0.5em;
-      color: #444;
-      max-width: 15ch;
-    }
-
-    p {
-      margin-bottom: 0.2em;
-      font-size: 1.2em;
-      color: #99bf38;
-      max-width: 36ch;
-    }
-
-    p + p {
-      font-size: 0.9em;
-      color: #444;
-    }
-  }
-
-  .content {
-    opacity: 0;
-    transform: translateY(2rem);
-    transition:
-      opacity 1s ease,
-      transform 1s ease;
-  }
-
-  .content.revealed {
-    opacity: 1;
-    transform: translateY(0);
-  }
-</style>
-
 <script is:inline>
   document.addEventListener("DOMContentLoaded", () => {
-    const contents = document.querySelectorAll("#uslugi .content");
+    const contents = document.querySelectorAll("#uslugi .content-fy");
 
     const observer = new IntersectionObserver(
       (entries) => {
